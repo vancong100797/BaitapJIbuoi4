@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <!-- 1 -->
+    <div class="container mt-5">
+        <div class="w-50 border border-success rounded p-5">
+            <h4 class="mb-3">So Sánh</h4>
+            <form>
+                <div class="form-group">
+                    <label for="number1">Số thứ nhất</label>
+                    <input type="number" class="form-control" id="number1" placeholder="Nhập số">
+                </div>
+                <div class="form-group">
+                    <label for="number2">Số thứ hai</label>
+                    <input type="number" class="form-control" id="number2" placeholder="Nhập số">
+                </div>
+                <div class="form-group">
+                    <label for="number3">Số thứ ba</label>
+                    <input type="number" class="form-control" id="number3" placeholder="Nhập số">
+                </div>
+                <button onclick="minMax()" type="button" class="shadow-lg px-4 py-2 bg-danger rounded">So Sánh</button>
+                <p id="sSanh" class="alert alert-danger mt-4"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="container mt-5">
+        <div class="w-50 border border-success rounded p-5">
+            <h4 class="mb-3">Chào Hỏi Người Dùng</h4>
+            <form>
+                <label for="">Người dùng</label>
+                <select class="form-control my-2" id="nguoiDung">
+                    <option value="Không Hợp lệ">--Chọn Người Dùng--</option>
+                    <option value="Chào ba">Ba</option>
+                    <option value="Chào mẹ">Mẹ</option>
+                    <option value="Chào anh">Anh Trai</option>
+                    <option value="Chào em">Em Gái</option>
+                </select>
+                <label for="">Buổi</label>
+                <select class="form-control my-2" id="buoi">
+                    <option value="none">--Chọn Buổi--</option>
+                    <option value="Chúc buổi sáng vui vẻ.">Buổi Sáng</option>
+                    <option value="Chúc buổi tối vui vẻ.">Buổi Tối</option>
+                </select>
+                <button onclick="chaoHoi()" type="button"
+                    class="shadow-lg px-4 py-2 mt-1 bg-danger rounded">Chào</button>
+                <p id="chao" class="alert alert-danger mt-4"></p>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- <div class="container mt-5">
+        <div class="w-50 border border-success rounded p-5">
+            <h4 class="mb-3">Lời Chào Hỏi</h4>
+            <form>
+                <div class="form-group">
+                    <label for="nguoiDung">Người dùng</label>
+                    <input type="text" class="form-control" id="nguoiDung" placeholder="Nhập người dùng">
+                </div>
+                <div class="form-group">
+                    <label for="buoi">Buổi</label>
+                    <input type="text" class="form-control" id="buoi" placeholder="Nhập buổi">
+                </div>
+                <button onclick="chaoH()" type="button" class="shadow-lg px-4 py-2 bg-danger rounded">Chào</button>
+                <p id="chao" class="alert alert-danger mt-4"></p>
+            </form>
+        </div>
+    </div> -->
+
+    <!-- 3 -->
+    <div class="container mt-5">
+        <div class="w-50 border border-success rounded p-5">
+            <h4 class="mb-3">Chẵn Lẻ</h4>
+            <form>
+                <div class="form-group">
+                    <label for="num1">Số thứ nhất</label>
+                    <input type="number" class="form-control" id="num1" placeholder="Nhập số">
+                </div>
+                <div class="form-group">
+                    <label for="num2">Số thứ hai</label>
+                    <input type="number" class="form-control" id="num2" placeholder="Nhập số">
+                </div>
+                <div class="form-group">
+                    <label for="num3">Số thứ ba</label>
+                    <input type="number" class="form-control" id="num3" placeholder="Nhập số">
+                </div>
+                <button onclick="chanLe()" type="button" class="shadow-lg px-4 py-2 bg-danger rounded">Chẳn Lẽ</button>
+                <p id="soChanLe" class="alert alert-danger mt-4"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="container my-5">
+        <div class="w-50 border border-success rounded p-5">
+            <h4 class="mb-3">Nhận Dạng Tam Giác</h4>
+            <form>
+                <div class="form-group">
+                    <label for="canhA">Cạnh a</label>
+                    <input type="number" class="form-control" id="canhA" placeholder="Nhập cạnh a">
+                </div>
+                <div class="form-group">
+                    <label for="canhB">Cạnh b</label>
+                    <input type="number" class="form-control" id="canhB" placeholder="Nhập cạnh b">
+                </div>
+                <div class="form-group">
+                    <label for="canhC">Cạnh c</label>
+                    <input type="number" class="form-control" id="canhC" placeholder="Nhập cạnh c">
+                </div>
+                <button onclick="tamGiac()" type="button" class="shadow-lg px-4 py-2 bg-danger rounded">Nhận Dạng</button>
+                <p id="aBC" class="alert alert-danger mt-4"></p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="./js/baitap1.js"></script>
+    <script src="./js/baitap2.js"></script>
+    <script src="./js/baitap3.js"></script>
+    <script src="./js/baitap4.js"></script>
+
+</body>
+
+</html>
